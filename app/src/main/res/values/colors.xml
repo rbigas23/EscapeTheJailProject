@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#BDBDBD</color>
-    <color name="colorSecondary">#1A2030</color>
+    <color name="color_primary">#BDBDBD</color>
+    <color name="color_secondary">#1A2030</color>
 </resources>
