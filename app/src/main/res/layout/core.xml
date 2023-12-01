@@ -26,45 +26,47 @@
         android:textSize="@dimen/manrope_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/core_title"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <ImageButton
         android:id="@+id/social"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="-35dp"
         android:background="@drawable/round_button_small"
-        android:src="@drawable/social_icon"
         app:layout_constraintBottom_toTopOf="@+id/settings"
         app:layout_constraintEnd_toStartOf="@+id/settings"
-        app:layout_constraintTop_toBottomOf="@+id/core_title" />
+        app:layout_constraintTop_toBottomOf="@+id/core_title"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/highscores"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="300dp"
-        android:layout_marginBottom="-10dp"
+        android:layout_marginBottom="-35dp"
         android:background="@drawable/round_button_small"
         app:layout_constraintBottom_toTopOf="@+id/settings"
         app:layout_constraintStart_toEndOf="@+id/settings"
-        app:layout_constraintTop_toBottomOf="@+id/core_title" />
+        app:layout_constraintTop_toBottomOf="@+id/core_title"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="45dp"
         android:background="@drawable/round_button_big"
         app:layout_constraintBottom_toTopOf="@+id/start"
         app:layout_constraintTop_toBottomOf="@+id/core_title"
-        tools:layout_editor_absoluteX="140dp" />
+        app:layout_constraintVertical_bias="0.878"
+        tools:layout_editor_absoluteX="153dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
