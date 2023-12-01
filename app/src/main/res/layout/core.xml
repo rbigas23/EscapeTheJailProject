@@ -2,13 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_secondary"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    style="@style/view_style">
+
+    <TextView
+        android:id="@+id/core_title"
+        style="@style/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ESCAPE THE JAIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
@@ -20,7 +28,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/core_title"
         app:layout_constraintVertical_bias="0.841" />
+
+    <ImageButton
+        android:id="@+id/social"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="-10dp"
+        android:background="@drawable/round_button_small"
+        android:src="@drawable/social_icon"
+        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintTop_toBottomOf="@+id/core_title" />
+
+    <ImageButton
+        android:id="@+id/highscores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="-10dp"
+        android:background="@drawable/round_button_small"
+        app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintStart_toEndOf="@+id/settings"
+        app:layout_constraintTop_toBottomOf="@+id/core_title" />
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_button_big"
+        app:layout_constraintBottom_toTopOf="@+id/start"
+        app:layout_constraintTop_toBottomOf="@+id/core_title"
+        tools:layout_editor_absoluteX="140dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

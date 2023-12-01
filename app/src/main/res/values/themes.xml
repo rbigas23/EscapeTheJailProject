@@ -13,4 +13,17 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="title_text" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:fontFamily">@font/kanit_extra_bold</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">35sp</item>
+    </style>
+    <style name="view_style" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/color_secondary</item>
+        <item name="android:paddingTop">50dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
 </resources>
