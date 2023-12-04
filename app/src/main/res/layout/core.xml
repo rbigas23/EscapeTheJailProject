@@ -69,4 +69,16 @@
         app:layout_constraintVertical_bias="0.878"
         tools:layout_editor_absoluteX="153dp" />
 
+    <EditText
+        style="@style/input_text"
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:background="@drawable/input_text_rounded"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="217dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
