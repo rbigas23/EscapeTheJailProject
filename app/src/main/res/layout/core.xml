@@ -10,7 +10,7 @@
         android:id="@+id/core_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ESCAPE THE JAIL"
+        android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/manrope_extra_bold"
-        android:text="START"
+        android:text="@string/deploy"
         android:textColor="@color/color_secondary"
         android:textSize="@dimen/manrope_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -68,17 +68,5 @@
         app:layout_constraintTop_toBottomOf="@+id/core_title"
         app:layout_constraintVertical_bias="0.878"
         tools:layout_editor_absoluteX="153dp" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        style="@style/input_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/input_text_rounded"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Name"
-        tools:layout_editor_absoluteX="37dp"
-        tools:layout_editor_absoluteY="282dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
