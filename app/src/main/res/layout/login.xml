@@ -6,7 +6,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/page_title"
         style="@style/title_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -29,63 +29,90 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
         app:layout_constraintVertical_bias="0.841" />
 
-    <TextView
-        android:id="@+id/user_text"
-        style="@style/plain_text"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="268dp"
-        android:fontFamily="@font/manrope_extra_bold"
-        android:text="USER"
-        app:layout_constraintEnd_toStartOf="@+id/edit_text_user_name"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text" />
-
-    <EditText
-        android:id="@+id/edit_text_user_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/input_text_rounded"
-        android:ems="10"
-        android:inputType="text"
-        android:text="________________"
+        android:layout_height="50dp"
+        android:layout_marginTop="280dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_text" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title">
 
-    <TextView
-        android:id="@+id/pass_text"
-        style="@style/plain_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/manrope_extra_bold"
-        android:text="PASS"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="434dp" />
+        <TextView
+            android:id="@+id/user_text"
+            style="@style/outer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/manrope_extra_bold"
+            android:text="USER" />
 
-    <EditText
-        android:id="@+id/edit_text_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="tesecallateya"
-        tools:layout_editor_absoluteX="125dp"
-        tools:layout_editor_absoluteY="419dp" />
+        <EditText
+            android:id="@+id/edit_text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rounded"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView3"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not registered yet? Register here"
-        android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="495dp" />
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/pass_text"
+            style="@style/outer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/manrope_extra_bold"
+            android:text="PASS" />
+
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rounded"
+            android:ems="10"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="20dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not registered yet? Register here"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="HERE" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
