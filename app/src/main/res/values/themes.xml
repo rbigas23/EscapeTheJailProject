@@ -27,4 +27,12 @@
         <item name="android:paddingRight">20dp</item>
         <item name="android:paddingLeft">20dp</item>
     </style>
+
+    <style name="plain_text" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:fontFamily">@font/manrope_extra_bold</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
 </resources>
