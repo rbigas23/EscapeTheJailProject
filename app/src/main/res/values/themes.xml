@@ -28,7 +28,4 @@
         <item name="android:paddingLeft">20dp</item>
     </style>
 
-    <style name="input_text" parent="Theme.MaterialComponents.DayNight">
-        <item name="android:fontFamily">@font/manrope_extra_bold</item>
-    </style>
 </resources>
