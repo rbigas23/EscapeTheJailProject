@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/color_primary"/>
     <corners android:radius="170dp"/>
-    <size android:width="230dp"/>
-    <size android:height="230dp"/>
-</selector>
+    <size android:width="180dp"/>
+    <size android:height="50dp"/>
+    <padding android:left="15dp"/>
+    <padding android:right="15dp"/>
+</shape>
