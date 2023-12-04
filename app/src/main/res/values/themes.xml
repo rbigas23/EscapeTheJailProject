@@ -16,7 +16,7 @@
     <style name="title_text" parent="Theme.MaterialComponents.DayNight">
         <item name="android:fontFamily">@font/kanit_extra_bold</item>
         <item name="android:textColor">@color/color_primary</item>
-        <item name="android:textSize">35sp</item>
+        <item name="android:textSize">@dimen/kanit_title_text_size</item>
     </style>
 
     <style name="view_style" parent="Theme.MaterialComponents.DayNight">
@@ -31,6 +31,13 @@
     <style name="input_text" parent="Theme.MaterialComponents.DayNight">
         <item name="android:fontFamily">@font/manrope_extra_bold</item>
         <item name="android:color">@color/color_primary</item>
-        <item name="android:textSize">@</item>
+        <item name="android:textSize">@dimen/manrope_text_size</item>
+    </style>
+
+    <style name="outer_text" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:fontFamily">@font/manrope_extra_bold</item>
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">@dimen/manrope_outer_text_size</item>
+
     </style>
 </resources>
