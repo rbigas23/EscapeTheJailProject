@@ -16,14 +16,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+        style="@style/inner_text"
         android:id="@+id/start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
-        android:fontFamily="@font/manrope_extra_bold"
         android:text="@string/deploy"
-        android:textColor="@color/color_secondary"
-        android:textSize="@dimen/manrope_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"

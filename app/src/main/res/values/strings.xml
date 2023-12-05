@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ESCAPE THE JAIL</string>
     <string name="deploy">START</string>
-    <string name="back">BACK</string>
+    <string name="back">RETURN</string>
     <string name="login">LOGIN</string>
     <string name="register">REGISTER</string>
     <string name="add_friend">ADD FRIEND</string>
