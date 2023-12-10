@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteY="210dp" />
 
     <TextView
-        android:id="@+id/hc_user2"
+        android:id="@+id/high_score_value"
         style="@style/inner_text"
         android:layout_width="102dp"
         android:layout_height="60dp"
@@ -72,13 +72,13 @@
         app:layout_constraintVertical_bias="0.841" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/highscore_text"
         style="@style/outer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:text="HIGHEST SCORE"
-        app:layout_constraintBottom_toTopOf="@+id/hc_user2"
+        app:layout_constraintBottom_toTopOf="@+id/high_score_value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
