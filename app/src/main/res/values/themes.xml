@@ -50,6 +50,11 @@
         <item name="android:textSize">@dimen/manrope_text_size</item>
     </style>
 
+    <style name="inner_dark_text" parent="default_widget_text">
+        <item name="android:textSize">@dimen/manrope_text_size</item>
+        <item name="android:color">@color/color_secondary</item>
+    </style>
+
     <!-- widget text styling : END -->
 
     <!-- special styles : START-->
