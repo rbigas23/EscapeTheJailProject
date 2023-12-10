@@ -7,7 +7,7 @@
     style="@style/view_style">
 
     <Button
-        android:id="@+id/login2"
+        android:id="@+id/return_levels"
         style="@style/inner_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/core_title2"
+        android:id="@+id/levels"
         style="@style/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -6,45 +6,23 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/leaderboards_title"
         style="@style/title_text"
+        android:id="@+id/leaderboards_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/add_friend"
+        android:text="@string/settings"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
-        style="@style/default_outer_text"
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CODE"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title" />
-
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <Button
-        android:id="@+id/register"
+        android:id="@+id/return_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
         android:fontFamily="@font/manrope_extra_bold"
-        android:text="@string/add_friend"
+        android:text="@string/back"
         android:textColor="@color/color_secondary"
         android:textSize="@dimen/manrope_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,5 +32,22 @@
         app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
         app:layout_constraintVertical_bias="0.841" />
 
+    <TextView
+        android:id="@+id/music"
+        style="@style/outer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MUSIC"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <TextView
+        android:id="@+id/sfx"
+        style="@style/outer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SFX"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="302dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

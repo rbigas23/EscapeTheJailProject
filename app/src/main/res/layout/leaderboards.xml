@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/view_style"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/first_score"
+        style="@style/inner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="17538"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/first_name"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <TextView
+        android:id="@+id/second_score"
+        style="@style/inner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="16472"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/second_name"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <TextView
+        android:id="@+id/second_name"
+        style="@style/inner_text"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="TSE"
+        app:layout_constraintStart_toEndOf="@+id/second_on_lb"
+        tools:layout_editor_absoluteY="272dp" />
+
+    <ImageButton
+        android:id="@+id/second_on_lb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button_big"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="269dp" />
+
+    <TextView
+        android:id="@+id/third_score"
+        style="@style/inner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="9201"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/third_name"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <ImageButton
+        android:id="@+id/third_on_lb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button_big"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="343dp" />
+
+    <TextView
+        android:id="@+id/third_name"
+        style="@style/inner_text"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="JFZ"
+        app:layout_constraintStart_toEndOf="@+id/third_on_lb"
+        tools:layout_editor_absoluteY="345dp" />
+
+    <TextView
+        android:id="@+id/first_name"
+        style="@style/inner_text"
+        android:layout_width="102dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/text_background"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="RBO"
+        app:layout_constraintStart_toEndOf="@+id/first_on_lb"
+        tools:layout_editor_absoluteY="197dp" />
+
+    <ImageButton
+        android:id="@+id/first_on_lb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_button_big"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <TextView
+        style="@style/title_text"
+        android:id="@+id/leaderboards_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/leaderboards"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/return_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/manrope_extra_bold"
+        android:text="@string/back"
+        android:textColor="@color/color_secondary"
+        android:textSize="@dimen/manrope_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
+        app:layout_constraintVertical_bias="0.841" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
