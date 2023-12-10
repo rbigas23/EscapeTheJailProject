@@ -33,7 +33,6 @@
     <style name="outer_text" parent="default_outer_text">
         <item name="android:fontFamily">@font/manrope_extra_bold</item>
         <item name="android:textSize">@dimen/manrope_outer_text_size</item>
-
     </style>
 
     <!-- outer text styling : END -->
@@ -42,15 +41,26 @@
 
     <style name="default_widget_text" parent="Theme.MaterialComponents.DayNight">
         <item name="android:textColor">@color/color_secondary</item>
+        <item name="android:fontFamily">@font/manrope_extra_bold</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
     </style>
 
     <style name="inner_text" parent="default_widget_text">
-        <item name="android:fontFamily">@font/manrope_extra_bold</item>
         <item name="android:textSize">@dimen/manrope_text_size</item>
     </style>
 
     <!-- widget text styling : END -->
+
+    <!-- special styles : START-->
+
+    <style name="mini_button_inner_text" parent="Theme.MaterialComponents.DayNight">
+        <item name="android:fontFamily">@font/manrope_extra_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- special styles : END-->
 
 </resources>

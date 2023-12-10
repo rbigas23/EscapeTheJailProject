@@ -10,33 +10,17 @@
         style="@style/title_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/social"
+        android:text="@string/register"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="@font/manrope_extra_bold"
-        android:text="@string/login"
-        android:textColor="@color/color_secondary"
-        android:textSize="@dimen/manrope_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/page_title"
-        app:layout_constraintVertical_bias="0.841" />
-
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="220dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +37,7 @@
             android:text="USER" />
 
         <EditText
-            android:id="@+id/edit_text_user_name"
+            android:id="@+id/edit_user_name_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/input_text_rounded"
@@ -70,7 +54,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
         <TextView
             android:id="@+id/pass_text"
@@ -82,7 +66,7 @@
             android:text="PASS" />
 
         <EditText
-            android:id="@+id/edit_text_password"
+            android:id="@+id/edit_password_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/input_text_rounded"
@@ -92,13 +76,43 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/mail_text"
+            style="@style/outer_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:fontFamily="@font/manrope_extra_bold"
+            android:text="MAIL" />
+
+        <EditText
+            android:id="@+id/edit_mail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input_text_rounded"
+            android:ems="10"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/registered_already"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -110,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Not registered yet? Register"
+                android:text="Already registered? Login"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
@@ -129,5 +143,22 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="@font/manrope_extra_bold"
+        android:text="REGISTER"
+        android:textColor="@color/color_secondary"
+        android:textSize="@dimen/manrope_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        app:layout_constraintVertical_bias="0.841" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

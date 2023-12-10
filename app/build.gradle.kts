@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.roc.escapethejail"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.roc.escapethejail"
