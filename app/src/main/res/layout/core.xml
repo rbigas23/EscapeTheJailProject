@@ -39,6 +39,8 @@
         android:background="@drawable/round_button_small"
         app:layout_constraintBottom_toTopOf="@+id/settings"
         app:layout_constraintEnd_toStartOf="@+id/settings"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/core_title"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -51,9 +53,11 @@
         android:layout_marginBottom="-35dp"
         android:background="@drawable/round_button_small"
         app:layout_constraintBottom_toTopOf="@+id/settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/settings"
         app:layout_constraintTop_toBottomOf="@+id/core_title"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.969" />
 
     <ImageButton
         android:id="@+id/settings"
