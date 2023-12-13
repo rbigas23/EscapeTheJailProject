@@ -23,7 +23,6 @@
 
     <style name="default_outer_text" parent="Theme.MaterialComponents.DayNight">
         <item name="android:textColor">@color/color_primary</item>
-
     </style>
 
     <style name="title_text" parent="default_outer_text">

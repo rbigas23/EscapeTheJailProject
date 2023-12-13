@@ -5,20 +5,37 @@
     style="@style/view_style"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/hc_user"
-        style="@style/inner_text"
-        android:layout_width="102dp"
-        android:layout_height="60dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/text_background"
+    <LinearLayout
+        android:id="@+id/second_on_leaderboard"
+        android:layout_width="315dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="144dp"
         android:gravity="center"
-        android:padding="13dp"
-        android:text="RBO"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
-        app:layout_constraintStart_toEndOf="@+id/hc"
-        tools:layout_editor_absoluteY="210dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
+
+        <ImageButton
+            android:id="@+id/second_on_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_button_big" />
+
+        <TextView
+            android:id="@+id/second_name"
+            style="@style/inner_text"
+            android:layout_width="102dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_background"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="JFZ" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/high_score_value"
@@ -26,23 +43,17 @@
         android:layout_width="102dp"
         android:layout_height="60dp"
         android:layout_margin="5dp"
+        android:layout_marginBottom="84dp"
         android:background="@drawable/text_background"
         android:gravity="center"
         android:padding="13dp"
         android:text="145030"
+        app:layout_constraintBottom_toTopOf="@+id/return_highscore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="352dp" />
-
-    <ImageButton
-        android:id="@+id/hc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:background="@drawable/round_button_big"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="201dp" />
+        app:layout_constraintTop_toBottomOf="@+id/highscore_text"
+        app:layout_constraintVertical_bias="0.112" />
 
     <TextView
         style="@style/title_text"
@@ -76,11 +87,11 @@
         style="@style/outer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="24dp"
         android:text="HIGHEST SCORE"
-        app:layout_constraintBottom_toTopOf="@+id/high_score_value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/second_on_leaderboard" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
