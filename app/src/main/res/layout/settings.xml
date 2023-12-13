@@ -37,9 +37,12 @@
         style="@style/outer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
         android:text="MUSIC"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="267dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title" />
 
     <TextView
         android:id="@+id/sfx"
@@ -47,7 +50,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SFX"
-        tools:layout_editor_absoluteX="103dp"
-        tools:layout_editor_absoluteY="302dp" />
+        app:layout_constraintBottom_toTopOf="@+id/return_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/music"
+        app:layout_constraintVertical_bias="0.051" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
