@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".social_activity">
 
     <TextView
         android:id="@+id/leaderboards_title"
