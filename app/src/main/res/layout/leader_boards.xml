@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/return_leaderboard"
+        android:id="@+id/return_leader_boards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
@@ -36,7 +36,7 @@
         android:layout_width="316dp"
         android:layout_height="234dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/return_leaderboard"
+        app:layout_constraintBottom_toTopOf="@+id/return_leader_boards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
@@ -57,7 +57,7 @@
                 android:background="@drawable/round_button_big" />
 
             <TextView
-                android:id="@+id/first_name"
+                android:id="@+id/first_name_rbo"
                 style="@style/inner_text"
                 android:layout_width="102dp"
                 android:layout_height="60dp"

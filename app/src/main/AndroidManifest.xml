@@ -20,16 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".main_activity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity android:name=".social_activity" />
-
+        <activity android:name=".levels_activity" />
+        <activity android:name=".leader_boards_activity" />
+        <activity android:name=".settings_activity" />
+        <activity android:name=".add_friend_activity" />
+        <activity android:name=".high_score_activity" />
+        <activity android:name=".friend_list_activity" />
     </application>
 
 </manifest>

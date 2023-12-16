@@ -11,27 +11,23 @@ class core_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.core)
 
-        val start = findViewById<Button>(R.id.start)
-        start.setOnClickListener {
-            val intent = Intent(this, core_activity::class.java)  // CAMBIAR LA CLASE
+        findViewById<Button>(R.id.start).setOnClickListener {
+            val intent = Intent(this, levels_activity::class.java)
             startActivity(intent)
         }
 
-        val social = findViewById<ImageButton>(R.id.social)
-        social.setOnClickListener {
+        findViewById<ImageButton>(R.id.social).setOnClickListener {
             val intent = Intent(this, social_activity::class.java)
             startActivity(intent)
         }
 
-        val settings = findViewById<ImageButton>(R.id.settings)
-        settings.setOnClickListener {
-            val intent = Intent(this, core_activity::class.java)  // CAMBIAR LA CLASE
+        findViewById<ImageButton>(R.id.settings).setOnClickListener {
+            val intent = Intent(this, settings_activity::class.java)
             startActivity(intent)
         }
 
-        val leader_boards = findViewById<ImageButton>(R.id.leader_boards)
-        leader_boards.setOnClickListener {
-            val intent = Intent(this, core_activity::class.java)  // CAMBIAR LA CLASE
+        findViewById<ImageButton>(R.id.leader_boards).setOnClickListener {
+            val intent = Intent(this, leader_boards_activity::class.java)
             startActivity(intent)
         }
     }
