@@ -13,9 +13,14 @@ class register_activity : AppCompatActivity()
         setContentView(R.layout.register)
 
         findViewById<Button>(R.id.register_here).setOnClickListener {
-            val intent = Intent(this, log_in_activity::class.java)  // Y bueno vas metiendo todos los listeners que quieras
+            val intent = Intent(this, log_in_activity::class.java)
             startActivity(intent)
-        } // Mirate la social_activity que ahí te explico como se hace lo del return y tal
+        }
+
+        findViewById<Button>(R.id.register_deploy).setOnClickListener {
+            val intent = Intent(this, log_in_activity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
