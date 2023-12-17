@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/return_highscore"
+        android:id="@+id/login_deploy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
@@ -115,7 +115,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/here"
+                android:id="@+id/here_login"
                 style="@style/mini_button_inner_text"
                 android:layout_width="50dp"
                 android:layout_height="28dp"

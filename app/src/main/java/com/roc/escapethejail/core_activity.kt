@@ -17,7 +17,7 @@ class core_activity : AppCompatActivity() {
         } // Me acabo de dar cuenta de que la variable no es necesaria, se puede poner dentro directamente
 
         findViewById<ImageButton>(R.id.social).setOnClickListener {
-            val intent = Intent(this, social_activity::class.java)  // Y bueno vas metiendo todos los listeners que quieras
+            val intent = Intent(this, register_activity::class.java)  // Y bueno vas metiendo todos los listeners que quieras
             startActivity(intent)
         } // Mirate la social_activity que ahí te explico como se hace lo del return y tal
 

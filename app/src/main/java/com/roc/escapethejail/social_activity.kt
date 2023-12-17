@@ -25,7 +25,7 @@ class social_activity : AppCompatActivity() {
         // contenido y ya, la flecha de tirar para atrás del móvil funciona "nativamente", y solo queda implementar
         // el return, como hemos hecho aquií debajo:
 
-        findViewById<Button>(R.id.return_social).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
+        findViewById<Button>(R.id.return_register).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }
 
 
