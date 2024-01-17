@@ -11,15 +11,11 @@ class log_in_activity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        findViewById<Button>(R.id.here_login).setOnClickListener {
-            val intent = Intent(this, register_activity::class.java)
-            startActivity(intent)
-        }
+        findViewById<Button>(R.id.here_login).setOnClickListener()
+        {startActivity(Intent(this, register_activity::class.java))}
 
-        findViewById<Button>(R.id.login_deploy).setOnClickListener {
-            val intent = Intent(this, social_activity::class.java)
-            startActivity(intent)
-        }
+        findViewById<Button>(R.id.login_deploy).setOnClickListener()
+        {startActivity(Intent(this, social_activity::class.java))}
 
     }
 }
