@@ -18,21 +18,4 @@ class jail_db (context: Context?, name: String?, factory: SQLiteDatabase.CursorF
     {
         TODO("Not yet implemented")
     }
-
-    fun insertData(name: String, pass: String, email: String): Long
-    {
-        val db = writableDatabase
-
-        val cv = ContentValues()
-        cv.put("USER", name)
-        cv.put("PASS", pass)
-        cv.put("EMAIL", email)
-        cv.put("SCORE", "0")
-
-        val result = db.insert("users", null, cv)
-
-        db.close()
-
-        return result
-    }
 }
