@@ -14,15 +14,15 @@ class core_activity : AppCompatActivity()
         setContentView(R.layout.core)
 
         findViewById<Button>(R.id.start).setOnClickListener()
-        {startActivity(Intent(this, levels_activity::class.java))}
+        {startActivity(Intent(this, levels_activity::class.java)).apply {}}
 
         findViewById<ImageButton>(R.id.social).setOnClickListener()
-        {startActivity(Intent(this, register_activity::class.java))}
+        {startActivity(Intent(this, register_activity::class.java)).apply {}}
 
         findViewById<ImageButton>(R.id.settings).setOnClickListener()
-        {startActivity(Intent(this, settings_activity::class.java))}
+        {startActivity(Intent(this, settings_activity::class.java)).apply {}}
 
         findViewById<ImageButton>(R.id.leader_boards).setOnClickListener()
-        {startActivity(Intent(this, leader_boards_activity::class.java))}
+        {startActivity(Intent(this, leader_boards_activity::class.java)).apply {}}
     }
 }

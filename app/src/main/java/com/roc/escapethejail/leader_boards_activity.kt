@@ -14,7 +14,7 @@ class leader_boards_activity : AppCompatActivity()
         setContentView(R.layout.leader_boards)
 
         findViewById<TextView>(R.id.first_name_rbo).setOnClickListener ()
-        {startActivity(Intent(this, high_score_activity::class.java))}
+        {startActivity(Intent(this, high_score_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.return_leader_boards).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }

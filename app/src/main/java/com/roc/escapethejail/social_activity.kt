@@ -13,10 +13,10 @@ class social_activity : AppCompatActivity()
         setContentView(R.layout.social)
 
         findViewById<Button>(R.id.add_friend_button).setOnClickListener()
-        {startActivity(Intent(this, add_friend_activity::class.java))}
+        {startActivity(Intent(this, add_friend_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.friend_list_button).setOnClickListener()
-        {startActivity(Intent(this, friend_list_activity::class.java))}
+        {startActivity(Intent(this, friend_list_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.return_social).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }

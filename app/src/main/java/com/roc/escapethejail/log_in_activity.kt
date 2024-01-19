@@ -12,10 +12,10 @@ class log_in_activity : AppCompatActivity()
         setContentView(R.layout.login)
 
         findViewById<Button>(R.id.here_login).setOnClickListener()
-        {startActivity(Intent(this, register_activity::class.java))}
+        {startActivity(Intent(this, register_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.login_deploy).setOnClickListener()
-        {startActivity(Intent(this, social_activity::class.java))}
+        {startActivity(Intent(this, social_activity::class.java)).apply {}}
 
     }
 }
