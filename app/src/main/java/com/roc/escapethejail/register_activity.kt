@@ -25,7 +25,7 @@ class register_activity : AppCompatActivity()
             val cv = ContentValues()
 
             cv.put("USER", name)
-            cv.put("PASS", findViewById<EditText>(R.id.register_password).text.toString())
+            cv.put("PASSWORD", findViewById<EditText>(R.id.register_password).text.toString())
             cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
             cv.put("SCORE", "0")
 
@@ -35,10 +35,22 @@ class register_activity : AppCompatActivity()
                         "users",
                         null,
                         cv
-                    ) == -1L
-                ) "user $name was successfully registered" else "couldn't register $name",
+                    ) != -1L
+                ) "User $name was successfully registered" else "Couldn't register $name",
                 Toast.LENGTH_SHORT
             ).show()
+
+            val data = db.rawQuery("SELECT * FROM users",null);
+            if (data.moveToFirst()){
+                do {
+                    id = data.getString(0).toInt()
+                    user = data.getString(1)
+                    password = data.getString(2)
+                } while (data.moveToNext())
+            }
+//            print()
+
+            Toast.makeText(this, "AQUI COÑO: " + id + user + password, Toast.LENGTH_LONG).show()
 
             db.close()
 
