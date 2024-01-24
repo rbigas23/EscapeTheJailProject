@@ -22,8 +22,8 @@ class register_activity : AppCompatActivity()
         {
             val db = jail_db(this, "users",  null, 1).writableDatabase
             val name = findViewById<EditText>(R.id.register_user_name).toString();
-
             val cv = ContentValues()
+
             cv.put("USER", name)
             cv.put("PASS", findViewById<EditText>(R.id.register_password).toString())
             cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).toString())
@@ -44,6 +44,5 @@ class register_activity : AppCompatActivity()
 
             startActivity(Intent(this, log_in_activity::class.java)).apply {}
         }
-
     }
 }
