@@ -21,12 +21,12 @@ class register_activity : AppCompatActivity()
         findViewById<Button>(R.id.register_deploy).setOnClickListener()
         {
             val db = jail_db(this, "users",  null, 1).writableDatabase
-            val name = findViewById<EditText>(R.id.register_user_name).toString();
+            val name = findViewById<EditText>(R.id.register_user_name).text.toString()
             val cv = ContentValues()
 
             cv.put("USER", name)
-            cv.put("PASS", findViewById<EditText>(R.id.register_password).toString())
-            cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).toString())
+            cv.put("PASS", findViewById<EditText>(R.id.register_password).text.toString())
+            cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
             cv.put("SCORE", "0")
 
             Toast.makeText(
