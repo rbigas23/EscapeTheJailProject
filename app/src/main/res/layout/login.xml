@@ -54,7 +54,7 @@
             android:text="USER" />
 
         <EditText
-            android:id="@+id/edit_text_user_name"
+            android:id="@+id/login_user_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/input_text_rounded"
@@ -83,7 +83,7 @@
             android:text="PASS" />
 
         <EditText
-            android:id="@+id/edit_text_password"
+            android:id="@+id/login_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/input_text_rounded"

@@ -29,32 +29,14 @@ class register_activity : AppCompatActivity()
             cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
             cv.put("SCORE", "0")
 
-            Toast.makeText(
-                this,
-                if (db.insert(
-                        "users",
-                        null,
-                        cv
-                    ) != -1L
-                ) "User $name was successfully registered" else "Couldn't register $name",
-                Toast.LENGTH_SHORT
-            ).show()
+            var success = (db.insert("users", null, cv) != -1L)
 
-            val data = db.rawQuery("SELECT * FROM users",null);
-            if (data.moveToFirst()){
-                do {
-                    id = data.getString(0).toInt()
-                    user = data.getString(1)
-                    password = data.getString(2)
-                } while (data.moveToNext())
-            }
-//            print()
+            if (success)
+                startActivity(Intent(this, log_in_activity::class.java)).apply {}
 
-            Toast.makeText(this, "AQUI COÑO: " + id + user + password, Toast.LENGTH_LONG).show()
+            Toast.makeText(this, if (success) "User $name was successfully registered" else "Couldn't register $name", Toast.LENGTH_SHORT).show()
 
             db.close()
-
-            startActivity(Intent(this, log_in_activity::class.java)).apply {}
         }
     }
 }
