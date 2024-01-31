@@ -26,11 +26,6 @@ class log_in_activity : AppCompatActivity()
             var user = findViewById<EditText>(R.id.login_user_name).text.toString()
             var password = findViewById<EditText>(R.id.login_password).text.toString()
 
-            /*
-            6 min
-            1 may
-            2 num
-             */
             if (users.moveToFirst())
             {
                 do
@@ -41,6 +36,7 @@ class log_in_activity : AppCompatActivity()
                         startActivity(Intent(this, social_activity::class.java)).apply {}
                         break
                     }
+                    else Toast.makeText(this, "Password or user is wrong!", Toast.LENGTH_SHORT).show()
                 }
                 while (users.moveToNext())
             }
