@@ -37,7 +37,7 @@ class log_in_activity : AppCompatActivity()
                 {
                     if (user == users.getString(1) && password == users.getString(2))
                     {
-                        Toast.makeText(this, "Logging on " + user + "..", Toast.LENGTH_SHORT)
+                        Toast.makeText(this, "Logging on " + user + "..", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this, social_activity::class.java)).apply {}
                         break
                     }

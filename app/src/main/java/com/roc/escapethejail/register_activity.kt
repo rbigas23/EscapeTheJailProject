@@ -20,23 +20,40 @@ class register_activity : AppCompatActivity()
 
         findViewById<Button>(R.id.register_deploy).setOnClickListener()
         {
-            val db = jail_db(this, "users",  null, 1).writableDatabase
-            val name = findViewById<EditText>(R.id.register_user_name).text.toString()
-            val cv = ContentValues()
+            val pass = findViewById<EditText>(R.id.register_password).text.toString()
+            var has_upper = false
+            var has_2_num = 0
 
-            cv.put("USER", name)
-            cv.put("PASSWORD", findViewById<EditText>(R.id.register_password).text.toString())
-            cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
-            cv.put("SCORE", "0")
+            for (char in pass)
+            {
+                has_upper = char.isUpperCase()
 
-            var success = (db.insert("users", null, cv) != -1L)
+                if (char.isDigit())
+                    has_2_num++
+            }
 
-            if (success)
-                startActivity(Intent(this, log_in_activity::class.java)).apply {}
+            if (has_2_num == 2 && pass.length <= 6 && has_upper)
+            {
+                val db = jail_db(this, "users",  null, 1).writableDatabase
+                val name = findViewById<EditText>(R.id.register_user_name).text.toString()
 
-            Toast.makeText(this, if (success) "User $name was successfully registered" else "Couldn't register $name", Toast.LENGTH_SHORT).show()
+                val cv = ContentValues()
 
-            db.close()
+                cv.put("USER", name)
+                cv.put("PASSWORD", pass)
+                cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
+                cv.put("SCORE", "0")
+
+                var success = (db.insert("users", null, cv) != -1L)
+
+                if (success)
+                    startActivity(Intent(this, log_in_activity::class.java)).apply {}
+
+                Toast.makeText(this, if (success) "User $name was successfully registered" else "Couldn't register $name", Toast.LENGTH_SHORT).show()
+
+                db.close()
+            }
+            else Toast.makeText(this, "Password needs to have 6 digit length, 1 capital letter and 2 numbers", Toast.LENGTH_SHORT).show()
         }
     }
 }
