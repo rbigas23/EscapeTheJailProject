@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 
-class log_in_activity : AppCompatActivity()
+class login_activity : AppCompatActivity()
 {
     override fun onCreate(savedInstanceState: Bundle?)
     {

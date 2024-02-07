@@ -16,11 +16,12 @@ class register_activity : AppCompatActivity()
         setContentView(R.layout.register)
 
         findViewById<Button>(R.id.register_here).setOnClickListener()
-        {startActivity(Intent(this, log_in_activity::class.java)).apply {}}
+        {startActivity(Intent(this, login_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.register_deploy).setOnClickListener()
         {
             val pass = findViewById<EditText>(R.id.register_password).text.toString()
+
             var has_upper = false
             var has_2_num = 0
 
@@ -47,7 +48,7 @@ class register_activity : AppCompatActivity()
                 var success = (db.insert("users", null, cv) != -1L)
 
                 if (success)
-                    startActivity(Intent(this, log_in_activity::class.java)).apply {}
+                    startActivity(Intent(this, login_activity::class.java)).apply {}
 
                 Toast.makeText(this, if (success) "User $name was successfully registered" else "Couldn't register $name", Toast.LENGTH_SHORT).show()
 

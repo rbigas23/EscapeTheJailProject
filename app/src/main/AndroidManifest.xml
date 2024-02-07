@@ -27,7 +27,7 @@
         <activity android:name=".add_friend_activity" />
         <activity android:name=".high_score_activity" />
         <activity android:name=".friend_list_activity" />
-        <activity android:name=".log_in_activity" />
+        <activity android:name=".login_activity" />
         <activity android:name=".register_activity" />
     </application>
 
