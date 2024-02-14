@@ -11,4 +11,7 @@
     <string name="social">SOCIAL</string>
     <string name="friend_list">FRIEND LIST</string>
     <string name="high_score">HIGH SCORE</string>
+    <string name="foldable_menu_home">Home</string>
+    <string name="foldable_menu_settings">Settings</string>
+    <string name="foldable_menu_social">Social</string>
 </resources>
