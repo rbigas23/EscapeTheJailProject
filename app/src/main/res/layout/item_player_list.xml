@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/caja_fila"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/first_on_leaderboard"
+        android:layout_width="match_parent"
+        android:layout_height="79dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/first_on_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/round_button_big"
+            android:src="@mipmap/round_emoji_events_black_24dp"/>
+
+        <TextView
+            android:id="@+id/name"
+            style="@style/inner_text"
+            android:layout_width="102dp"
+            android:layout_height="60dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_background"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/score"
+            style="@style/inner_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_background"
+            android:gravity="center"
+            android:padding="14dp"
+            android:text="" />
+    </LinearLayout>
+
+
+</LinearLayout>

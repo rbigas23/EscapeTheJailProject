@@ -34,126 +34,19 @@
 
     <LinearLayout
         android:layout_width="316dp"
-        android:layout_height="234dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/return_leader_boards"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
 
-        <LinearLayout
-            android:id="@+id/first_on_leaderboard"
-            android:layout_width="316dp"
-            android:layout_height="79dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/first_on_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="@drawable/round_button_big" />
-
-            <TextView
-                android:id="@+id/first_name_rbo"
-                style="@style/inner_text"
-                android:layout_width="102dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="RBO" />
-
-            <TextView
-                android:id="@+id/first_score"
-                style="@style/inner_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="17538" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/third_on_leaderboard"
-            android:layout_width="313dp"
-            android:layout_height="77dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/third_on_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="@drawable/round_button_big" />
-
-            <TextView
-                android:id="@+id/third_name"
-                style="@style/inner_text"
-                android:layout_width="102dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="TSE" />
-
-            <TextView
-                android:id="@+id/third_score"
-                style="@style/inner_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="7999" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/second_on_leaderboard"
-            android:layout_width="315dp"
-            android:layout_height="79dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/second_on_lb"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="@drawable/round_button_big" />
-
-            <TextView
-                android:id="@+id/second_name"
-                style="@style/inner_text"
-                android:layout_width="102dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="JFZ" />
-
-            <TextView
-                android:id="@+id/second_score"
-                style="@style/inner_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="@drawable/text_background"
-                android:gravity="center"
-                android:padding="14dp"
-                android:text="8728" />
-        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_lista_partidas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
