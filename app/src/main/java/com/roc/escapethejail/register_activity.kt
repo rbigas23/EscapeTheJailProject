@@ -27,7 +27,8 @@ class register_activity : AppCompatActivity()
 
             for (char in pass)
             {
-                has_upper = char.isUpperCase()
+                if (has_upper)
+                    has_upper = char.isUpperCase()
 
                 if (char.isDigit())
                     has_2_num++
