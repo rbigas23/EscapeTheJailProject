@@ -34,7 +34,7 @@ class register_activity : AppCompatActivity()
                     has_2_num++
             }
 
-            if (has_2_num == 2 && pass.length <= 6 && has_upper)
+            if (has_2_num == 2 && pass.length >= 6 && has_upper)
             {
                 val db = jail_db(this, "users",  null, 1).writableDatabase
                 val name = findViewById<EditText>(R.id.register_user_name).text.toString()
