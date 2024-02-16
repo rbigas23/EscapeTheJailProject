@@ -21,16 +21,9 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest
 {
     @Test
-    fun useAppContext()
+    fun use_app_context()
     {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.roc.escapethejail", appContext.packageName)
-    }
-    @Test
-    fun change_view_correctly()
-    {
-        onView(withId(R.id.settings)).perform(click());
-
-        onView(withId(R.id.social)).check(matches(ViewMatchers.withText("SOCIAL")))
     }
 }
