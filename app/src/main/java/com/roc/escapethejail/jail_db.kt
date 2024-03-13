@@ -12,7 +12,7 @@ class jail_db (context: Context?, name: String?, factory: SQLiteDatabase.CursorF
             "PASSWORD TEXT," +
             "EMAIL TEXT," +
             "SCORE TEXT)"
-Un    override fun onCreate(database: SQLiteDatabase?) { database?.execSQL(user_table) }
+    override fun onCreate(database: SQLiteDatabase?) { database?.execSQL(user_table) }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {}
 }
