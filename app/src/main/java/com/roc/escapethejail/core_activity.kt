@@ -2,8 +2,10 @@ package com.roc.escapethejail
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class core_activity : AppCompatActivity()

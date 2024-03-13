@@ -5,9 +5,16 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlin.math.log
 
+enum class login_validation
+{
+    pass,
+    email,
+    both,
+    none
+}
 class register_activity : AppCompatActivity()
 {
     override fun onCreate(savedInstanceState: Bundle?)
@@ -23,7 +30,9 @@ class register_activity : AppCompatActivity()
             val pass = findViewById<EditText>(R.id.register_password).text.toString()
             val email = findViewById<EditText>(R.id.register_mail).text.toString()
 
-            if (is_valid_session(pass, email))
+            val what_failed: login_validation? = is_valid_session(pass, email)
+
+            if (what_failed == login_validation.none)
             {
                 val db = jail_db(this, "users",  null, 1).writableDatabase
                 val name = findViewById<EditText>(R.id.register_user).text.toString()
@@ -40,14 +49,31 @@ class register_activity : AppCompatActivity()
                 if (success)
                     startActivity(Intent(this, login_activity::class.java)).apply {}
 
-                Toast.makeText(this, if (success) "User $name was successfully registered" else "Couldn't register $name", Toast.LENGTH_SHORT).show()
+                utils.send_toast(if (success) "User $name was successfully registered" else "Couldn't register $name", this)
 
                 db.close()
             }
-            else Toast.makeText(this, "Password needs to have 6 digit length, 1 capital letter and 2 numbers", Toast.LENGTH_SHORT).show()
+            utils.send_toast(
+                if (what_failed == login_validation.pass) "Password is invalid ( 1 Upper letter and 6 numbers minimum )"
+                else if (what_failed == login_validation.email) "Email is invalid"
+                else "Both password and email are invalid",
+                this)
         }
     }
 
     fun is_valid(text : String, pattern : String): Boolean { return Regex(pattern).matches(text) }
-    fun is_valid_session(password : String, email : String) : Boolean { return is_valid(password, "\"(?=.*[A-Z])(?=.*[a-z])(?=.*\\\\d.*\\\\d.*\\\\d.*\\\\d.*\\\\d.*\\\\d).{8,}|(?=.*[A-Z])(?=.*[a-z])(?=.*\\\\d.*\\\\d.*[a-zA-Z].*\\\\d.*\\\\d).{8,}\"") && is_valid(email, ".+\\@.+\\..+") }
-}
+
+    fun is_valid_session(password: String, email: String): login_validation
+    {
+        val pass_valid = is_valid(password, "(?=.*[A-Z])(?=.*[a-z])(?=.*\\d.*\\d.*\\d.*\\d.*\\d.*\\d).{8,}|(?=.*[A-Z])(?=.*[a-z])(?=.*\\d.*\\d.*[a-zA-Z].*\\d.*\\d).{8,}")
+        val email_valid = is_valid(email, ".+\\@.+\\..+")
+
+        //check what is wrong
+        return when
+        {
+            !pass_valid && !email_valid -> login_validation.both
+            !pass_valid -> login_validation.pass
+            !email_valid -> login_validation.email
+            else -> login_validation.none
+        }
+    }}
