@@ -21,20 +21,9 @@ class register_activity : AppCompatActivity()
         findViewById<Button>(R.id.register_deploy).setOnClickListener()
         {
             val pass = findViewById<EditText>(R.id.register_password).text.toString()
+            val email = findViewById<EditText>(R.id.register_mail).text.toString()
 
-            var has_upper = false
-            var has_2_num = 0
-
-            for (char in pass)
-            {
-                if (!has_upper)
-                    has_upper = char.isUpperCase()
-
-                if (char.isDigit())
-                    has_2_num++
-            }
-
-            if (has_2_num == 2 && pass.length >= 6 && has_upper)
+            if (is_valid_session(pass, email))
             {
                 val db = jail_db(this, "users",  null, 1).writableDatabase
                 val name = findViewById<EditText>(R.id.register_user).text.toString()
@@ -43,7 +32,7 @@ class register_activity : AppCompatActivity()
 
                 cv.put("USER", name)
                 cv.put("PASSWORD", pass)
-                cv.put("EMAIL", findViewById<EditText>(R.id.register_mail).text.toString())
+                cv.put("EMAIL", email)
                 cv.put("SCORE", "0")
 
                 var success = (db.insert("users", null, cv) != -1L)
@@ -58,4 +47,7 @@ class register_activity : AppCompatActivity()
             else Toast.makeText(this, "Password needs to have 6 digit length, 1 capital letter and 2 numbers", Toast.LENGTH_SHORT).show()
         }
     }
+
+    fun is_valid(text : String, pattern : String): Boolean { return Regex(pattern).matches(text) }
+    fun is_valid_session(password : String, email : String) : Boolean { return is_valid(password, "\"(?=.*[A-Z])(?=.*[a-z])(?=.*\\\\d.*\\\\d.*\\\\d.*\\\\d.*\\\\d.*\\\\d).{8,}|(?=.*[A-Z])(?=.*[a-z])(?=.*\\\\d.*\\\\d.*[a-zA-Z].*\\\\d.*\\\\d).{8,}\"") && is_valid(email, ".+\\@.+\\..+") }
 }
