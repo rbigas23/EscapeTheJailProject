@@ -24,7 +24,7 @@ class TextViewTest {
         var scenario: ActivityScenario<login_activity>? = null
         scenario = ActivityScenario.launch(login_activity::class.java)
         scenario.onActivity { activity ->
-            val textView = activity.findViewById<TextView>(R.id.here_button_description)
+            val textView = activity.findViewById<TextView>(R.id.login_here_button_description)
             val actualText = textView.text.toString()
             assertEquals(expectedText, actualText)
         }

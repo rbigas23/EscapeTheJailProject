@@ -9,7 +9,7 @@
     <TextView
         style="@style/title_text"
 
-        android:id="@+id/add_friend_title"
+        android:id="@+id/login_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_friend"
@@ -29,7 +29,7 @@
         android:text="CODE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title" />
+        app:layout_constraintTop_toBottomOf="@+id/login_title" />
 
     <EditText
         android:id="@+id/add_friend_input_text"
@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
+        app:layout_constraintTop_toBottomOf="@+id/login_title"
         app:layout_constraintVertical_bias="0.841" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

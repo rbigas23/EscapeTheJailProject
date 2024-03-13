@@ -8,7 +8,7 @@
     <TextView
         style="@style/title_text"
 
-        android:id="@+id/add_friend_title"
+        android:id="@+id/login_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/leaderboards"
@@ -24,7 +24,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
+        app:layout_constraintTop_toBottomOf="@+id/login_title">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_lista_partidas"

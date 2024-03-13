@@ -7,9 +7,8 @@
     tools:context=".core_activity">
 
     <TextView
-        style="@style/title_text"
-
         android:id="@+id/register_title"
+        style="@style/title_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/register"
@@ -19,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/register_linear_layout"
+        android:id="@+id/register_user_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="156dp"
@@ -28,11 +27,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
+        app:layout_constraintTop_toBottomOf="@+id/register_title">
 
         <TextView
+            android:id="@+id/register_user_text"
             style="@style/outer_text"
-            android:id="@+id/user_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
@@ -50,7 +49,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/friend_list_layout"
+        android:id="@+id/register_password_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -58,10 +57,10 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/register_linear_layout">
+        app:layout_constraintTop_toBottomOf="@+id/register_user_linear_layout">
 
         <TextView
-            android:id="@+id/text_pass"
+            android:id="@+id/register_password_text"
             style="@style/outer_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,15 +79,14 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/register_mail_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/friend_list_layout">
+        app:layout_constraintTop_toBottomOf="@+id/register_password_linear_layout">
 
         <TextView
             android:id="@+id/mail_text"
@@ -109,21 +107,21 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/registered_already"
+        android:id="@+id/register_already_registered_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/register_mail_linear_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/here_button_description"
+                android:id="@+id/register_here_button_description"
                 style="@style/default_outer_text"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -142,7 +140,7 @@
                 android:text="here"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/here_button_description"
+                app:layout_constraintStart_toEndOf="@+id/register_here_button_description"
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -161,7 +159,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
+        app:layout_constraintTop_toBottomOf="@+id/register_title"
         app:layout_constraintVertical_bias="0.841" />
 
 

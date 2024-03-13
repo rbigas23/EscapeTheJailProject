@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
+        app:layout_constraintTop_toBottomOf="@+id/login_title">
 
         <ImageButton
             android:id="@+id/second_on_lb"
@@ -58,7 +58,7 @@
     <TextView
         style="@style/title_text"
 
-        android:id="@+id/add_friend_title"
+        android:id="@+id/login_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/high_score"
@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
+        app:layout_constraintTop_toBottomOf="@+id/login_title"
         app:layout_constraintVertical_bias="0.841" />
 
     <TextView

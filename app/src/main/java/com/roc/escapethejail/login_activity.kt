@@ -14,7 +14,7 @@ class login_activity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
 
-        findViewById<Button>(R.id.here_login).setOnClickListener()
+        findViewById<Button>(R.id.login_here_button).setOnClickListener()
         {startActivity(Intent(this, register_activity::class.java)).apply {}}
 
         findViewById<Button>(R.id.login_deploy).setOnClickListener()
@@ -23,7 +23,7 @@ class login_activity : AppCompatActivity()
             val db = jail_db(this, "users",  null, 1).readableDatabase
             val users = db.rawQuery("SELECT * FROM users", null)
 
-            var user = findViewById<EditText>(R.id.login_user_name).text.toString()
+            var user = findViewById<EditText>(R.id.login_user).text.toString()
             var password = findViewById<EditText>(R.id.login_password).text.toString()
 
             if (users.moveToFirst())
