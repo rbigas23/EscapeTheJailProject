@@ -53,11 +53,7 @@ class register_activity : AppCompatActivity()
 
                 db.close()
             }
-            utils.send_toast(
-                if (what_failed == login_validation.pass) "Password is invalid ( 1 Upper letter and 6 numbers minimum )"
-                else if (what_failed == login_validation.email) "Email is invalid"
-                else "Both password and email are invalid",
-                this)
+            utils.send_toast(if (what_failed == login_validation.pass) "Password is invalid ( 1 Upper letter and 6 numbers minimum )" else if (what_failed == login_validation.email) "Email is invalid" else "Both password and email are invalid",this)
         }
     }
 
