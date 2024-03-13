@@ -11,7 +11,5 @@ class levels_activity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.levels)
-
-        findViewById<Button>(R.id.return_levels).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }
 }

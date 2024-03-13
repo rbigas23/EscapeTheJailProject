@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".core_activity">
 
     <TextView
-        android:id="@+id/leaderboards_title"
         style="@style/title_text"
+
+        android:id="@+id/add_friend_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/social"
@@ -29,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
         app:layout_constraintVertical_bias="0.841" />
 
     <LinearLayout
@@ -42,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
 
         <TextView
             android:id="@+id/user_text"
@@ -63,7 +64,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/friend_list_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -99,7 +100,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/friend_list_layout">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

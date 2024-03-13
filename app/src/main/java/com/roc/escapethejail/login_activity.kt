@@ -36,7 +36,7 @@ class login_activity : AppCompatActivity()
                         startActivity(Intent(this, social_activity::class.java)).apply {}
                         break
                     }
-                    else Toast.makeText(this, "Password or user is wrong!", Toast.LENGTH_SHORT).show()
+                    else Toast.makeText(this, "Password or User is wrong!", Toast.LENGTH_SHORT).show()
                 }
                 while (users.moveToNext())
             }

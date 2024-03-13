@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".core_activity">
 
     <TextView
         style="@style/title_text"
-        android:id="@+id/leaderboards_title"
+
+        android:id="@+id/add_friend_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/settings"
@@ -16,41 +18,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/return_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="@font/manrope_extra_bold"
-        android:text="@string/back"
-        android:textColor="@color/color_secondary"
-        android:textSize="@dimen/manrope_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
-        app:layout_constraintVertical_bias="0.841" />
-
     <TextView
-        android:id="@+id/music"
         style="@style/outer_text"
+
+        android:id="@+id/music"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="212dp"
-        android:text="MUSIC"
+        android:text="@string/settings_music_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title" />
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title" />
 
     <TextView
         android:id="@+id/sfx"
         style="@style/outer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SFX"
-        app:layout_constraintBottom_toTopOf="@+id/return_settings"
+        android:text="@string/settings_effects_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"

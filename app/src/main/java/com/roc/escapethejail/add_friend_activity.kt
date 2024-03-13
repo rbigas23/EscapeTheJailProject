@@ -10,6 +10,4 @@ class add_friend_activity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_friend)
     }
-
-
 }

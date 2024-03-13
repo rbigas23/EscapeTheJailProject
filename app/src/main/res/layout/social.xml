@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
     android:background="@color/color_secondary"
-    tools:context=".social_activity">
+    tools:context=".core_activity">
 
     <TextView
-        android:id="@+id/leaderboards_title"
         style="@style/title_text"
+
+        android:id="@+id/add_friend_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/social"
@@ -24,7 +26,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
 
         <ImageButton
             android:id="@+id/social_add_friends"
@@ -44,23 +46,5 @@
             android:src="@mipmap/round_supervisor_account_black_24dp" />
 
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/return_social"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
-        android:fontFamily="@font/manrope_extra_bold"
-        android:text="@string/back"
-        android:textColor="@color/color_secondary"
-        android:textSize="@dimen/manrope_text_size"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
-        app:layout_constraintVertical_bias="0.841" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

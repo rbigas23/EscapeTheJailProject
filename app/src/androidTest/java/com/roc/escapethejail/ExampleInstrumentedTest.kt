@@ -21,7 +21,7 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest
 {
     @Test
-    fun use_app_context()
+    fun useAppContext()
     {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.roc.escapethejail", appContext.packageName)

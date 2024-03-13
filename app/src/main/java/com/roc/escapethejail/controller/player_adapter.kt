@@ -8,37 +8,30 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class player_adapter(private val playerList: ArrayList<player>): RecyclerView.Adapter<player_adapter.ViewHolder>() {
+class player_adapter(private val players : ArrayList<player>): RecyclerView.Adapter<player_adapter.ViewHolder>()
+{
+    lateinit var context : Context
 
-    lateinit var context: Context
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder { return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_player_list, parent, false)) }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.item_player_list, parent, false)
-        return ViewHolder(itemView)
+    var on_item_click : ((player) -> Unit)? = null
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    {
+        val name_text_view  : TextView = itemView.findViewById(R.id.item_player_name)
+        val score_text_view : TextView = itemView.findViewById(R.id.item_player_score)
     }
 
-    var onItemClick: ((player) -> Unit)? = null
+    override fun onBindViewHolder(holder: ViewHolder, position: Int)
+    {
+        val player = players[position]
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.findViewById(R.id.name)
-        val scoreTextView: TextView = itemView.findViewById(R.id.score)
+        holder.score_text_view.text = player.score
+        holder.name_text_view.text = player.name
+
+        holder.itemView.setOnClickListener() { on_item_click?.invoke(player) }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val player = playerList[position]
-
-        holder.scoreTextView.text = player.score
-        holder.nameTextView.text = player.name
-
-        holder.itemView.setOnClickListener {
-            onItemClick?.invoke(player)
-        }
-
-    }
-
-    override fun getItemCount(): Int {
-        return playerList.size
-    }
+    override fun getItemCount(): Int { return players.size }
 
 }

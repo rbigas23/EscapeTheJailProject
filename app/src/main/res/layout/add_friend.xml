@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".core_activity">
 
     <TextView
-        android:id="@+id/leaderboards_title"
         style="@style/title_text"
+
+        android:id="@+id/add_friend_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_friend"
@@ -18,18 +20,19 @@
 
 
     <TextView
-        android:id="@+id/textView"
         style="@style/outer_text"
+
+        android:id="@+id/add_friend_code"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:text="CODE"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title" />
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/add_friend_input_text"
         style="@style/inner_dark_text"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
@@ -37,15 +40,15 @@
         android:background="@drawable/rounded_button"
         android:ems="8"
         android:inputType="text"
-        android:text="318795"
+        android:text=""
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_code" />
 
     <Button
-        android:id="@+id/register_here"
+        android:id="@+id/add_friend_register_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
@@ -57,8 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
         app:layout_constraintVertical_bias="0.841" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

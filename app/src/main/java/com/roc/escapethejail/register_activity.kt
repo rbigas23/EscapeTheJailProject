@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity
 
 class register_activity : AppCompatActivity()
 {
-
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -38,7 +37,7 @@ class register_activity : AppCompatActivity()
             if (has_2_num == 2 && pass.length >= 6 && has_upper)
             {
                 val db = jail_db(this, "users",  null, 1).writableDatabase
-                val name = findViewById<EditText>(R.id.register_user_name).text.toString()
+                val name = findViewById<EditText>(R.id.register_user).text.toString()
 
                 val cv = ContentValues()
 

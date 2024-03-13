@@ -11,9 +11,5 @@ class friend_list_activity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.friend_list)
-
-        findViewById<Button>(R.id.return_friend_list).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }
-
-
 }

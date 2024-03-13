@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".core_activity">
 
     <TextView
-        android:id="@+id/leaderboards_title"
         style="@style/title_text"
+
+        android:id="@+id/register_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/register"
@@ -17,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/register_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="156dp"
@@ -26,28 +28,29 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title">
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title">
 
         <TextView
-            android:id="@+id/user_text"
             style="@style/outer_text"
+            android:id="@+id/user_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="8dp"
             android:fontFamily="@font/manrope_extra_bold"
-            android:text="USER" />
+            android:text="@string/user_text" />
 
         <EditText
-            android:id="@+id/register_user_name"
+            android:id="@+id/register_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/input_text_rounded"
             android:ems="10"
             android:inputType="text" />
+
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/friend_list_layout"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -55,7 +58,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintTop_toBottomOf="@+id/register_linear_layout">
 
         <TextView
             android:id="@+id/text_pass"
@@ -85,7 +88,7 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/friend_list_layout">
 
         <TextView
             android:id="@+id/mail_text"
@@ -158,7 +161,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/leaderboards_title"
+        app:layout_constraintTop_toBottomOf="@+id/add_friend_title"
         app:layout_constraintVertical_bias="0.841" />
 
 

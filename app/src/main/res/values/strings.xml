@@ -11,7 +11,13 @@
     <string name="social">SOCIAL</string>
     <string name="friend_list">FRIEND LIST</string>
     <string name="high_score">HIGH SCORE</string>
-    <string name="foldable_menu_home">Home</string>
-    <string name="foldable_menu_settings">Settings</string>
-    <string name="foldable_menu_social">Social</string>
+
+    <string name="add_friend_code_text">CODE</string>
+
+    <string name="settings_music_text">MUSIC</string>
+    <string name="settings_effects_text">SFX</string>
+
+    <string name="user_text">USER</string>
+    <string name="password_text">PASSWORD</string>
+    <string name="email_text">EMAIL</string>
 </resources>

@@ -6,22 +6,10 @@
     android:layout_height="match_parent"
     style="@style/view_style">
 
-    <Button
-        android:id="@+id/return_levels"
-        style="@style/inner_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:background="@drawable/rounded_button"
-        android:text="@string/back"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
-        android:id="@+id/levels"
         style="@style/title_text"
+
+        android:id="@+id/levels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/level"
@@ -33,7 +21,7 @@
         android:layout_width="327dp"
         android:layout_height="268dp"
         android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/return_levels"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/levels">

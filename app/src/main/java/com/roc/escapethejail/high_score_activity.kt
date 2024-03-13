@@ -10,7 +10,5 @@ class high_score_activity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.high_score)
-
-        findViewById<Button>(R.id.return_highscore).setOnClickListener { onBackPressedDispatcher.onBackPressed() }
     }
 }

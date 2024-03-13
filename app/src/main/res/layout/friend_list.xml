@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/view_style"
-    tools:context=".main_activity">
+    tools:context=".core_activity">
 
     <TextView
-        android:id="@+id/page_title"
         style="@style/title_text"
+
+        android:id="@+id/friend_list_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/friend_list"
@@ -16,41 +18,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/flecha1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/arrow_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/page_title" />
-
-    <Button
-        android:id="@+id/flecha2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="70dp"
-        android:background="@drawable/arrow_button"
-        android:rotation="180"
-        app:layout_constraintBottom_toTopOf="@+id/return_friend_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
 
     <LinearLayout
-        android:id="@+id/linearLayout1"
+        android:id="@+id/friend_list_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toTopOf="@+id/friend_list_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flecha1">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
-            android:id="@+id/profile_picture_1"
+            android:id="@+id/friend_list_profile_1"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginRight="10dp"
@@ -58,7 +39,8 @@
 
         <Button
             style="@style/inner_dark_text"
-            android:id="@+id/player_name_1"
+
+            android:id="@+id/friend_list_player_name"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -68,7 +50,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/friend_list_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -76,17 +58,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+        app:layout_constraintTop_toBottomOf="@+id/friend_list_linear_layout">
 
         <Button
-            android:id="@+id/profile_picture_2"
+            android:id="@+id/friend_list_profile_2"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/round_button_big" />
 
         <Button
-            android:id="@+id/player_name_2"
+            android:id="@+id/friend_list_player_name_2"
             style="@style/inner_dark_text"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
@@ -101,11 +83,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/flecha2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/friend_list_layout">
 
         <Button
             android:id="@+id/profile_picture_3"
@@ -138,7 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        app:layout_constraintTop_toBottomOf="@+id/friend_list_title"
         app:layout_constraintVertical_bias="0.841" />
 
 
