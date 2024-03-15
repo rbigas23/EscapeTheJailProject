@@ -19,18 +19,24 @@ class login_activity : AppCompatActivity()
 
         findViewById<Button>(R.id.login_deploy).setOnClickListener()
         {
+            val db = jail_db(this, "users",  null, 1).writableDatabase
 
-            val db = jail_db(this, "users",  null, 1).readableDatabase
+            val user = findViewById<EditText>(R.id.login_user).text.toString()
 
-            var user = findViewById<EditText>(R.id.login_user).text.toString()
+            val cursor = db.rawQuery("SELECT PASSWORD FROM users WHERE USER LIKE ?", arrayOf(user))
 
-            val db_pass = db.rawQuery("SELECT PASSWORD FROM users WHERE USER LIKE '$user'", null)
-
-            if (db_pass.getString(0) == findViewById<EditText>(R.id.login_password).text.toString())
+            if (cursor.moveToFirst())
             {
-                utils.send_toast("Logging on $user..", this)
-                startActivity(Intent(this, social_activity::class.java)).apply {}
+                if (findViewById<EditText>(R.id.login_password).text.toString() == cursor.getString(0))
+                {
+                    utils.send_toast("Logging on $user..", this)
+                    startActivity(Intent(this, social_activity::class.java))
+                }
+                else utils.send_toast("Password is incorrect", this)
             }
+            else utils.send_toast("User not found", this)
+
+            cursor.close()
         }
     }
 }
