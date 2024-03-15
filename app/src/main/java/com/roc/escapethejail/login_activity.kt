@@ -19,9 +19,14 @@ class login_activity : AppCompatActivity()
 
         findViewById<Button>(R.id.login_deploy).setOnClickListener()
         {
+
+            val db = jail_db(this, "users",  null, 1).readableDatabase
+
             var user = findViewById<EditText>(R.id.login_user).text.toString()
 
-            if (jail_db(this, "users",  null, 1).readableDatabase.rawQuery("SELECT PASS FROM users WHERE USER LIKE '" + user + "'", null).getString(0) == findViewById<EditText>(R.id.login_password).text.toString())
+            val db_pass = db.rawQuery("SELECT PASSWORD FROM users WHERE USER LIKE '$user'", null)
+
+            if (db_pass.getString(0) == findViewById<EditText>(R.id.login_password).text.toString())
             {
                 utils.send_toast("Logging on $user..", this)
                 startActivity(Intent(this, social_activity::class.java)).apply {}
