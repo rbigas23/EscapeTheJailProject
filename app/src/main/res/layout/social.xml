@@ -8,9 +8,9 @@
     tools:context=".core_activity">
 
     <TextView
-        style="@style/title_text"
-
         android:id="@+id/login_title"
+
+        style="@style/title_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/social"

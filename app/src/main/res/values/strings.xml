@@ -20,4 +20,6 @@
     <string name="user_text">USER</string>
     <string name="password_text">PASSWORD</string>
     <string name="email_text">EMAIL</string>
+
+    <string name="monitor_title">MONITOR</string>
 </resources>

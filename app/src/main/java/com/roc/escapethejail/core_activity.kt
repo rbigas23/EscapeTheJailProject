@@ -19,7 +19,7 @@ class core_activity : AppCompatActivity()
         {startActivity(Intent(this, levels_activity::class.java)).apply {}}
 
         findViewById<ImageButton>(R.id.core_social).setOnClickListener()
-        {startActivity(Intent(this, login_activity::class.java)).apply {}}
+        {startActivity(Intent(this, if (user_globals.logged_in) social_activity::class.java else login_activity::class.java)).apply {}}
 
         findViewById<ImageButton>(R.id.core_settings).setOnClickListener()
         {startActivity(Intent(this, settings_activity::class.java)).apply {}}

@@ -30,6 +30,7 @@ class login_activity : AppCompatActivity()
                 if (findViewById<EditText>(R.id.login_password).text.toString() == cursor.getString(0))
                 {
                     utils.send_toast("Logging on $user..", this)
+                    user_globals.logged_in = true
                     startActivity(Intent(this, social_activity::class.java))
                 }
                 else utils.send_toast("Password is incorrect", this)

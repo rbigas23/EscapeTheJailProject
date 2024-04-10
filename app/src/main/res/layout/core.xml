@@ -66,6 +66,20 @@
         app:layout_constraintVertical_bias="0.969" />
 
     <ImageButton
+        android:id="@+id/core_monitoring"
+        android:layout_width="93dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/round_button_small"
+        android:src="@mipmap/monitoring_foreground"
+        app:layout_constraintBottom_toTopOf="@+id/core_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/core_title"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <ImageButton
         android:id="@+id/core_settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

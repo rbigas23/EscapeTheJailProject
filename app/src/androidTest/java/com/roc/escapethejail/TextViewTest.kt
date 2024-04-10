@@ -5,11 +5,14 @@ import androidx.test.ext.junit.rules.ActivityScenarioRule
 import org.junit.Assert.assertEquals
 import org.junit.Rule
 import org.junit.Test
-class TextViewTest {
+
+class TextViewTest
+{
     @get:Rule
     var activityRule: ActivityScenarioRule<core_activity> = ActivityScenarioRule(core_activity::class.java)
     @Test
-    fun mainTitleTest() {
+    fun mainTitleTest()
+    {
         val expectedText = "ESCAPE THE JAIL"
         val scenario = activityRule.scenario
         scenario.onActivity { activity ->
@@ -18,8 +21,10 @@ class TextViewTest {
             assertEquals(expectedText, actualText)
         }
     }
+
     @Test
-    fun hereButtonDescTest() {
+    fun hereButtonDescTest()
+    {
         val expectedText = "Not registered yet? Register"
         var scenario: ActivityScenario<login_activity>? = null
         scenario = ActivityScenario.launch(login_activity::class.java)

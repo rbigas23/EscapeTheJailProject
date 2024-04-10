@@ -32,12 +32,14 @@ class register_activity : AppCompatActivity()
 
             val what_failed: login_validation? = is_valid_session(pass, email)
 
+            var password_valid_when = "( 1 Upper letter, 1 Lower letter and 6 numbers minimum )"
+
             if (what_failed == login_validation.none)
             {
-                val db = jail_db(this, "users",  null, 1).writableDatabase
+                var db = jail_db(this, "users",  null, 1).writableDatabase
                 val name = findViewById<EditText>(R.id.register_user).text.toString()
 
-                val cv = ContentValues()
+                var cv = ContentValues()
 
                 cv.put("USER", name)
                 cv.put("PASSWORD", pass)
@@ -47,13 +49,38 @@ class register_activity : AppCompatActivity()
                 var success = (db.insert("users", null, cv) != -1L)
 
                 if (success)
-                    startActivity(Intent(this, login_activity::class.java)).apply {}
+                {
+                    val cursor = db.rawQuery("SELECT MAX(ID) FROM users LIMIT 1;", null)
+                    var last_id = 0L
+
+                    if (cursor != null && cursor.moveToFirst())
+                    {
+                        last_id = cursor.getLong(0)
+                        cursor.close()
+                    }
+
+                    db = jail_db(this, "sessions",  null, 1).writableDatabase
+
+                    cv = ContentValues()
+
+                    cv.put("SESSION_COUNT", "0")
+                    cv.put("DATE_ADDED", utils.get_current_date())
+                    cv.put("USER_ID", last_id)
+
+                    success = (db.insert("sessions", null, cv) != -1L)
+
+                    if (success)
+                    {
+                        startActivity(Intent(this, login_activity::class.java)).apply {}
+                        user_globals.logged_in = true
+                    }
+                }
 
                 utils.send_toast(if (success) "User $name was successfully registered" else "Couldn't register $name", this)
 
                 db.close()
             }
-            utils.send_toast(if (what_failed == login_validation.pass) "Password is invalid ( 1 Upper letter, 1 Lower letter and 6 numbers minimum )" else if (what_failed == login_validation.email) "Email is invalid" else "Both password and email are invalid",this)
+            else utils.send_toast(if (what_failed == login_validation.pass) "Password is invalid $password_valid_when" else if (what_failed == login_validation.email) "Email is invalid" else "Both password $password_valid_when and email are invalid",this)
         }
     }
 

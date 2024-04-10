@@ -1,10 +1,19 @@
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/textViewToastMessage"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="16dp"
-    android:textColor="@color/color_primary"
-    android:textSize="@dimen/manrope_mini_text_size"
-    android:background="@color/color_secondary"
-    android:gravity="center"
-    android:layout_gravity="center"/>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@color/color_primary" >
+
+    <ImageView android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="10dp" />
+
+    <TextView android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/color_secondary" />
+
+</LinearLayout>
