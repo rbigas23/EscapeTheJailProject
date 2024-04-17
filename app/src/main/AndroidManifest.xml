@@ -33,6 +33,7 @@
         <activity android:name=".friend_list_activity" />
         <activity android:name=".login_activity" />
         <activity android:name=".register_activity" />
+        <activity android:name=".monitor_activity" />
 
     </application>
 </manifest>

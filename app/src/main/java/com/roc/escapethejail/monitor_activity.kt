@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter
 
 class monitor_activity : AppCompatActivity()
 {
-    lateinit var amount_of_users_registered : String
+    var amount_of_users_registered : String = ""
     var once : Boolean = false
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?)
@@ -23,27 +23,33 @@ class monitor_activity : AppCompatActivity()
 
         if (!once)
         {
-            amount_of_users_registered = refresh_count(amount_of_users_registered.toLong()).toString()
+            amount_of_users_registered = refresh_count().toString()
             once = true
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
-    fun refresh_count(count : Long) : Long
+    fun refresh_count(count : Long = 0L) : Long
     {
+        utils.send_toast("entered refresh", this);
         val last_month = LocalDate.now().minusMonths(1)
+        val last_month_formatted = last_month.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
 
-        var db = jail_db(this, "sessions",  null, 1).writableDatabase
-
-        val cursor = db.rawQuery("SELECT SESSION_COUNT from sessions WHERE DATE_ADDED >= date($last_month.format(DateTimeFormatter.ofPattern(\"yyyy-MM-dd\")))", null)
-
+        val db = jail_db(this, "sessions", null, 1).writableDatabase
         var total_sessions = 0L
 
-        do total_sessions += cursor.getLong(0)
-        while (cursor.moveToNext())
+        db.rawQuery(
+            "SELECT SESSION_COUNT FROM sessions WHERE DATE_ADDED >= ?",
+            arrayOf(last_month_formatted)
+        ).use { cursor ->
+            if (cursor.moveToFirst())
+            {
+                do total_sessions += cursor.getLong(0)
+                while (cursor.moveToNext())
+            }
+        }
+        utils.send_toast("returning refresh", this);
 
-        cursor.close()
-
-        return total_sessions
+        return count + total_sessions
     }
 }

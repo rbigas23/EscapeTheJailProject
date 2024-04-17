@@ -26,5 +26,9 @@ class core_activity : AppCompatActivity()
 
         findViewById<ImageButton>(R.id.core_leader_boards).setOnClickListener()
         {startActivity(Intent(this, leader_boards_activity::class.java)).apply {}}
+
+        findViewById<ImageButton>(R.id.core_monitoring).setOnClickListener()
+        {startActivity(Intent(this, monitor_activity::class.java)).apply {}}
+
     }
 }
