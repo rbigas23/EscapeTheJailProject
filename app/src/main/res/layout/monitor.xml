@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
-        android:text="AMOUNT OF USERS REGISTERED THIS MONTH"
+        android:text="AMOUNT OF USERS SESSIONS THIS MONTH"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

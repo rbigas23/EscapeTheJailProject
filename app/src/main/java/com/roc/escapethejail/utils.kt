@@ -14,7 +14,6 @@ object utils
         val toast = Toast(context)
         toast.setText(message)
         toast.duration = Toast.LENGTH_LONG
-        toast.view = LayoutInflater.from(context).inflate(R.layout.escape_the_jail_custom_toast, null)
         toast.show()
     }
 
