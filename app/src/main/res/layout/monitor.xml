@@ -6,6 +6,21 @@
     style="@style/view_style"
     tools:context=".core_activity">
 
+    <Button
+        android:id="@+id/monitor_refresh"
+
+        style="@style/inner_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="172dp"
+        android:background="@drawable/rounded_button"
+        android:text="REFRESH"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monitor_users_registered"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/monitor_sub_title"
@@ -13,13 +28,14 @@
         style="@style/outer_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
         android:text="AMOUNT OF USERS SESSIONS THIS MONTH"
         android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/monitor_title" />
+        app:layout_constraintTop_toBottomOf="@+id/monitor_info"
+        app:layout_constraintVertical_bias="0.027" />
 
     <TextView
         android:id="@+id/monitor_users_registered"
@@ -49,5 +65,21 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/monitor_info"
+        style="@style/mini_button_inner_text"
+        android:layout_width="50dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="160dp"
+        android:background="@drawable/mini_button"
+        android:padding="0dp"
+        android:text="info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/login_here_button_description"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

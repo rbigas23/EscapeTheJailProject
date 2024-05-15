@@ -6,6 +6,19 @@
     tools:context=".core_activity">
 
     <TextView
+        android:id="@+id/login_password_requirements"
+        style="@style/default_outer_text"
+        android:layout_width="283dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="1 Upper letter, 1 Lower letter and 6 numbers minimum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_password_linear_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
         android:id="@+id/login_title"
         style="@style/title_text"
         android:layout_width="0dp"
@@ -80,7 +93,7 @@
         android:id="@+id/login_already_registered_linear_layout"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
